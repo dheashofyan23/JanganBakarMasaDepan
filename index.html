@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>#JanganBakarMasaDepan – Kampanye Edukasi Karhutla</title>
+<meta name="description" content="Kampanye edukasi tentang kebakaran hutan dan lahan (karhutla): dampak, fakta penting, dan aksi nyata.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#E4E6DF;--ink:#1D2B24;--soft:#4B5A51;--line:#B9BFB2;--green:#2E6A4C;--amber:#F0A500;--panel:#F3F4EF;--bad:#A3361F;
+--head:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Public Sans",system-ui,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body)}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+.logo{font:800 1.1rem var(--head);text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:.95rem}
+nav a{color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.hero{color:#fff;padding:120px 0 130px;background:linear-gradient(180deg,rgba(18,22,18,.5),rgba(18,22,18,.85)),url(assets/hero.jpg) center/cover no-repeat,radial-gradient(ellipse at 75% 100%,#B5441F 0,#4A2A1C 38%,#1D2B24 78%)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.6rem);font-weight:800;max-width:14ch;letter-spacing:-.02em}
+.hero p{max-width:52ch;color:#E9ECE4;font-size:1.15rem;margin:18px 0 26px}
+.hero .btn{background:var(--amber);color:var(--ink)}
+.hero .btn:hover{background:#fff}
+.hero .btn.alt{background:transparent;color:#fff;border:2px solid #fff}
+.hero .btn.alt:hover{background:#fff;color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:#fff;border:0;border-radius:10px;padding:12px 20px;font:600 1rem var(--body);cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--green)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn.alt:hover{background:var(--ink);color:#fff}
+section{padding:68px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:10px}
+.lead{max-width:58ch;color:var(--soft);margin:0 0 30px}
+/* dampak */
+.icons{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.pic{width:100%;height:100%;overflow:hidden;background:#D8D2BC}
+.pic svg,.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.icon{display:flex;flex-direction:column;width:190px;padding:0;overflow:hidden;background:var(--panel);border:3px solid var(--line);border-radius:10px;cursor:pointer;text-align:left}
+.icon .pic{height:110px}
+.icon em{font:600 1rem var(--body);font-style:normal;color:var(--ink);padding:10px 12px}
+.icon[aria-pressed=true]{border-color:var(--ink);background:var(--amber)}
+.impact{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:24px;background:var(--panel);border:1px solid var(--line);border-left:8px solid var(--amber);border-radius:4px;padding:20px 24px 20px 20px;min-height:220px}
+.impact .pic{min-height:220px;border-radius:4px}
+.impact h3{font-size:1.5rem;margin-bottom:10px}
+.impact ul{margin:0;padding-left:1.2em}
+.impact li{margin:6px 0}
+/* fakta */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px}
+.fact b{display:block;font:800 2.3rem/1.05 var(--head);color:var(--green);margin-bottom:8px}
+.fact p{margin:0 0 12px}
+.fact small{display:block;color:var(--soft);font-size:.85rem;border-top:1px solid var(--line);padding-top:8px;line-height:1.45}
+.note{margin-top:18px;color:var(--soft);font-size:.95rem;max-width:70ch}
+/* aksi */
+.bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden;max-width:420px;margin:0 0 6px}
+.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .3s}
+.prog{color:var(--soft);font-size:.95rem;margin:0 0 20px}
+.checks{list-style:none;margin:0;padding:0;max-width:720px}
+.checks li{border-bottom:1px solid var(--line)}
+.checks label{display:flex;gap:14px;align-items:flex-start;padding:14px 4px;cursor:pointer}
+.checks input{width:22px;height:22px;margin-top:3px;accent-color:var(--green);flex:none}
+.checks input:checked+span{color:var(--soft);text-decoration:line-through}
+/* artikel */
+.arts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.art{background:var(--panel);border:1px solid var(--line);border-radius:4px;display:flex;flex-direction:column}
+.thumb{height:170px}
+.art .in{padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.chip{align-self:flex-start;font-size:.82rem;font-weight:600;background:var(--ink);color:#fff;border-radius:99px;padding:2px 12px}
+.art h3{font-size:1.25rem}
+.art p{margin:0;color:var(--soft);font-size:.97rem;flex:1}
+dialog{border:0;border-radius:12px;max-width:640px;width:calc(100% - 32px);padding:30px;background:var(--panel);color:var(--ink)}
+dialog::backdrop{background:rgba(20,30,24,.6)}
+dialog h3{font-size:1.7rem;margin-bottom:12px}
+dialog p{margin:0 0 12px}
+/* sumber */
+.src{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.src a{display:block;background:var(--panel);border:2px solid var(--ink);border-radius:10px;padding:20px;text-decoration:none;color:var(--ink)}
+.src a:hover{background:var(--amber)}
+.src b{display:block;font:800 1.2rem var(--head);margin-bottom:4px}
+footer{background:var(--ink);color:#fff;padding:44px 0;margin-top:20px}
+footer .tag{font:800 clamp(1.6rem,5vw,2.6rem) var(--head)}
+footer p{color:#C5CCC0;max-width:62ch;font-size:.95rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+@media(max-width:700px){.impact{grid-template-columns:1fr}.icon{flex:1 1 140px;width:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="#">#JanganBakarMasaDepan</a>
+<nav aria-label="Navigasi utama"><a href="#dampak">Dampak</a><a href="#fakta">Fakta</a><a href="#aksi">Aksi</a><a href="#artikel">Artikel</a><a href="#sumber">Sumber resmi</a></nav>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+<h1>Api di lahan hari ini, asap di masa depan kita.</h1>
+<p>Kebakaran hutan dan lahan (karhutla) hampir selalu berulang tiap musim kemarau. Di sini kamu bisa memahami dampaknya, menguji pengetahuan, dan memilih satu langkah nyata untuk mencegahnya.</p>
+<a class="btn" href="#dampak">Lihat dampaknya</a> <a class="btn alt" href="#aksi">Lihat aksi kecil</a>
+</div></div>
+
+<section id="dampak"><div class="wrap">
+<h2>Siapa yang terkena dampaknya?</h2>
+<p class="lead">Klik salah satu gambar untuk melihat bagaimana karhutla memengaruhi manusia, satwa, dan lingkungan.</p>
+<div class="icons" id="icons"></div>
+<div class="impact" id="impact" aria-live="polite"></div>
+</div></section>
+
+<section id="fakta"><div class="wrap">
+<h2>Karhutla fact corner</h2>
+<p class="lead">Angka penting beserta sumber dan tahunnya, agar kamu bisa mengeceknya sendiri.</p>
+<div class="facts" id="facts"></div>
+<p class="note">Catatan: angka luas karhutla dapat berbeda antar lembaga karena perbedaan metode pemetaan. Selalu cek data terbaru di sumber resminya (lihat bagian Sumber resmi).</p>
+</div></section>
+
+<section id="aksi"><div class="wrap">
+<h2>Aksi kecil yang bisa kamu mulai hari ini</h2>
+<p class="lead">Centang yang sudah kamu lakukan. Progresmu tersimpan di peramban ini.</p>
+<div class="bar"><i id="barfill"></i></div>
+<p class="prog" id="prog"></p>
+<ul class="checks" id="checks"></ul>
+</div></section>
+
+<section id="artikel"><div class="wrap">
+<h2>Artikel edukasi</h2>
+<p class="lead">Bacaan singkat untuk memahami karhutla lebih dalam.</p>
+<div class="arts" id="arts"></div>
+</div></section>
+
+<section id="sumber"><div class="wrap">
+<h2>Sumber informasi resmi</h2>
+<p class="lead">Pantau cuaca, titik panas, dan potensi karhutla langsung dari lembaga resmi.</p>
+<div class="src">
+<a href="https://www.bmkg.go.id/cuaca/karhutla" target="_blank" rel="noopener"><b>BMKG: Peringatan Karhutla</b>Informasi cuaca, titik panas, dan potensi karhutla.</a>
+<a href="https://sipongi.gakkum.kehutanan.go.id/" target="_blank" rel="noopener"><b>SiPongi+ (Kementerian Kehutanan)</b>Sistem pemantauan karhutla: titik panas dan data penanganan terbaru.</a>
+<a href="https://bnpb.go.id" target="_blank" rel="noopener"><b>BNPB</b>Informasi kebencanaan dan penanggulangan bencana nasional.</a>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="tag">#JanganBakarMasaDepan</div>
+<p>Kampanye edukasi ini dibuat untuk tugas kuliah. Data diperiksa pada Oktober 2026; mohon cek sumber resmi untuk angka terbaru. Bagikan tagarnya jika kamu setuju bahwa masa depan tidak untuk dibakar.</p>
+</div></footer>
+
+<dialog id="dlg" aria-labelledby="dt"><h3 id="dt"></h3><div id="db"></div><button class="btn" id="dclose" style="margin-top:12px">Tutup</button></dialog>
+
+<script>
+const $=s=>document.querySelector(s);
+const V='viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"';
+const sm=(x,y,r)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#6F766D" opacity=".45"/>`;
+const fl=x=>`<path d="M${x} 215c-20-30 5-45 0-72 25 22 35 46 20 72z" fill="#E4572E"/><path d="M${x+4} 215c-10-18 3-28 0-42 14 12 18 28 10 42z" fill="#F0A500"/>`;
+const S={
+manusia:`<svg ${V}><rect width="400" height="240" fill="#E7D7A6"/><circle cx="300" cy="70" r="34" fill="#F0A500"/><rect width="400" height="240" fill="#D8D2BC" opacity=".5"/><g fill="#6E7A70"><rect x="20" y="110" width="50" height="130"/><rect x="80" y="80" width="40" height="160"/><rect x="130" y="120" width="60" height="120"/><rect x="250" y="100" width="45" height="140"/><rect x="305" y="130" width="70" height="110"/></g><rect y="205" width="400" height="35" fill="#1D2B24"/><rect x="174" y="146" width="52" height="64" rx="14" fill="#2E6A4C"/><circle cx="200" cy="120" r="26" fill="#C98F63"/><path d="M174 112q26-36 52 0z" fill="#1D2B24"/><rect x="182" y="122" width="36" height="20" rx="8" fill="#fff"/></svg>`,
+satwa:`<svg ${V}><rect width="400" height="240" fill="#D9C9A0"/><circle cx="90" cy="55" r="30" fill="#F0A500" opacity=".85"/><rect width="400" height="240" fill="#CFCBB8" opacity=".45"/>${sm(330,40,34)}${sm(370,70,26)}${sm(300,70,22)}<rect x="40" y="0" width="22" height="240" fill="#4A3A2C"/><path d="M50 70H340" stroke="#4A3A2C" stroke-width="12" stroke-linecap="round"/><g stroke="#C8642B" stroke-width="12" stroke-linecap="round"><path d="M208 128L192 74M252 128L270 74M218 172L206 208M242 172L254 208"/></g><ellipse cx="230" cy="148" rx="30" ry="38" fill="#C8642B"/><circle cx="230" cy="98" r="23" fill="#C8642B"/><circle cx="230" cy="103" r="13" fill="#E3A878"/><circle cx="225" cy="100" r="2" fill="#1D2B24"/><circle cx="235" cy="100" r="2" fill="#1D2B24"/><rect y="214" width="400" height="26" fill="#1D2B24"/>${fl(330)}${fl(372)}</svg>`,
+lingkungan:`<svg ${V}><rect width="400" height="240" fill="#E3D5A3"/><circle cx="90" cy="60" r="30" fill="#F0A500" opacity=".8"/><rect width="400" height="240" fill="#D3CFBA" opacity=".4"/>${sm(280,50,40)}${sm(330,30,34)}${sm(250,90,26)}<g fill="#2E6A4C"><path d="M10 215l32-100 32 100z"/><path d="M62 215l26-74 26 74z"/><path d="M110 215l34-110 34 110z"/></g><g fill="#1D2B24"><rect x="232" y="140" width="8" height="75"/><rect x="278" y="118" width="8" height="97"/><rect x="326" y="150" width="8" height="65"/></g>${fl(236)}${fl(282)}${fl(330)}<rect y="214" width="400" height="26" fill="#1D2B24"/></svg>`,
+gambut:`<svg ${V}><rect width="400" height="240" fill="#E0D6B2"/><rect width="400" height="110" fill="#D3CFBA" opacity=".5"/>${sm(110,40,30)}${sm(150,22,24)}${sm(270,48,34)}<rect y="100" width="400" height="30" fill="#7A5B3A"/><rect y="130" width="400" height="110" fill="#3A2B20"/><rect y="190" width="400" height="50" fill="#86A3B0" opacity=".75"/><path d="M0 190H400" stroke="#C6DAE3" stroke-width="3" stroke-dasharray="10 8"/><g fill="#E4572E"><ellipse cx="120" cy="150" rx="22" ry="8"/><ellipse cx="250" cy="160" rx="30" ry="9"/><ellipse cx="330" cy="145" rx="16" ry="6"/></g><g fill="#F0A500"><ellipse cx="120" cy="150" rx="10" ry="3"/><ellipse cx="250" cy="160" rx="14" ry="4"/></g><path d="M100 100c-14-24 4-34 0-52 18 16 24 34 14 52zM260 100c-14-24 4-34 0-52 18 16 24 34 14 52z" fill="#E4572E"/></svg>`,
+kesehatan:`<svg ${V}><rect width="400" height="240" fill="#EBD9A0"/><rect width="400" height="240" fill="#D3CFBA" opacity=".5"/><g fill="#6F766D" opacity=".4"><circle cx="50" cy="50" r="26"/><circle cx="350" cy="190" r="34"/><circle cx="340" cy="45" r="20"/><circle cx="60" cy="195" r="22"/></g><circle cx="200" cy="125" r="72" fill="#C98F63"/><path d="M128 112q10-62 72-62t72 62q-30-28-72-28t-72 28z" fill="#1D2B24"/><circle cx="174" cy="112" r="6" fill="#1D2B24"/><circle cx="226" cy="112" r="6" fill="#1D2B24"/><path d="M146 138l-20-8M254 138l20-8" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M148 134h104v18q0 30-52 38q-52-8-52-38z" fill="#fff" stroke="#1D2B24" stroke-width="3"/><path d="M164 152h72M164 166h72" stroke="#C5CCC0" stroke-width="2"/></svg>`,
+data:`<svg ${V}><rect width="400" height="240" fill="#EAE7D8"/><path d="M30 208H370" stroke="#1D2B24" stroke-width="2"/><rect x="70" y="58" width="70" height="150" fill="#E4572E"/><rect x="165" y="113" width="70" height="95" fill="#F0A500"/><rect x="260" y="141" width="70" height="67" fill="#2E6A4C"/><g font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#1D2B24" text-anchor="middle"><text x="105" y="50">2,6 jt ha</text><text x="200" y="105">1,65 jt ha</text><text x="295" y="133">1,16 jt ha</text><text x="105" y="228">2015</text><text x="200" y="228">2019</text><text x="295" y="228">2023</text></g></svg>`,
+pantau:`<svg ${V}><rect width="400" height="240" fill="#1D2B24"/><path d="M0 60H400M0 120H400M0 180H400M80 0V240M160 0V240M240 0V240M320 0V240" stroke="#2E4A3C"/><path d="M40 150q30-60 90-50t60 50q-10 40-70 45t-80-45z" fill="#2E6A4C"/><path d="M230 90q40-40 100-20t40 70q-30 40-90 30t-50-80z" fill="#2E6A4C"/><g fill="none" stroke="#F0A500" opacity=".55"><circle cx="110" cy="140" r="18"/><circle cx="290" cy="105" r="20"/><circle cx="290" cy="105" r="34"/></g><g fill="#F0A500"><circle cx="110" cy="140" r="6"/><circle cx="135" cy="125" r="5"/><circle cx="290" cy="105" r="6"/><circle cx="312" cy="130" r="5"/><circle cx="268" cy="124" r="4"/></g><circle cx="135" cy="125" r="5" fill="#E4572E"/></svg>`};
+const pic=k=>`<div class="pic" data-k="${k}" role="img" aria-label="Ilustrasi ${k}">${S[k]}</div>`;
+/* Ganti ilustrasi dengan foto sendiri: simpan file assets/<nama>.jpg (manusia, satwa, lingkungan, gambut, kesehatan, data, pantau). Foto otomatis menggantikan ilustrasi. */
+function upgrade(root){root.querySelectorAll(".pic").forEach(p=>{const im=new Image();im.alt="";im.onload=()=>p.replaceChildren(im);im.src="assets/"+p.dataset.k+".jpg"})}
+/* Dampak */
+const impact={
+manusia:{i:"🫁",t:"Manusia",l:["Asap mengandung partikel halus (PM2.5) yang menyebabkan batuk, iritasi mata, dan gangguan pernapasan (ISPA).","Anak-anak, lansia, ibu hamil, dan penderita asma paling rentan.","Sekolah diliburkan, penerbangan terganggu, dan aktivitas ekonomi melambat.","Kebakaran 2015 diperkirakan merugikan Indonesia lebih dari Rp221 triliun (Bank Dunia)."]},
+satwa:{i:"🦧",t:"Satwa",l:["Habitat orangutan, harimau, gajah, dan satwa lain hilang dalam hitungan hari.","Satwa yang selamat terdesak ke permukiman dan lebih mudah berkonflik dengan manusia.","Satwa kecil, burung, dan serangga yang tidak bisa lari cepat ikut mati.","Rantai makanan terganggu, sehingga pemulihan ekosistem butuh waktu sangat lama."]},
+lingkungan:{i:"🌳",t:"Lingkungan",l:["Api melepas karbon dalam jumlah besar ke atmosfer dan mempercepat pemanasan global.","Gambut yang terbakar sulit dipadamkan dan terus mengepulkan asap.","Tanah menjadi gersang dan rawan erosi, kualitas air sungai ikut menurun.","Hutan yang hilang tidak bisa lagi menahan air dan menyerap karbon."]}};
+const icons=$("#icons");
+Object.entries(impact).forEach(([k,v],n)=>{const b=document.createElement("button");b.className="icon";b.innerHTML=`${pic(k)}<em>${v.t}</em>`;b.setAttribute("aria-pressed","false");b.onclick=()=>showImpact(k);b.dataset.k=k;icons.appendChild(b)});
+function showImpact(k){const v=impact[k];document.querySelectorAll(".icon").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));$("#impact").innerHTML=`${pic(k)}<div><h3>Dampak bagi ${v.t.toLowerCase()}</h3><ul>${v.l.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;upgrade($("#impact"))}
+showImpact("manusia");upgrade($("#icons"));
+/* Fakta */
+const facts=[
+["2,6 juta ha","Lahan yang terbakar di Indonesia sepanjang 2015, salah satu krisis kebakaran terbesar abad ini.","Pernyataan Menteri LHK dikutip Medcom.id, 2023; Greenpeace Indonesia, 2015"],
+["Rp221 triliun","Perkiraan kerugian ekonomi akibat kebakaran dan kabut asap 2015 (setara lebih dari US$16 miliar).","Bank Dunia, 2015"],
+["1,16 juta ha","Luas karhutla Indonesia sepanjang 2023, tahun dengan El Nino kuat.","SiPongi+ dan UNDRR (GAR Special Report 2024)"],
+["624 → 183","Emisi karhutla (juta ton CO2e) pada 2019 dibanding 2023. Turun, tetapi tetap sangat besar.","KLHK, Laporan Kinerja Direktorat PKHL 2023, dikutip Greenpeace Indonesia, 2024"],
+["190 ribu ha","Karhutla di Kalimantan Selatan pada 2023, provinsi dengan area terbakar terluas tahun itu.","SiPongi+ (190.394 ha), dikutip Kompas.com, 2024"],
+["2,13 juta ha","Estimasi Greenpeace Indonesia untuk 2023, hampir dua kali angka resmi. Metode berbeda, hasil berbeda.","Greenpeace Indonesia, 2024"]];
+$("#facts").innerHTML=facts.map(f=>`<div class="fact"><b>${f[0]}</b><p>${f[1]}</p><small>Sumber: ${f[2]}</small></div>`).join("");
+/* Checklist */
+const acts=["Tidak membuang puntung rokok sembarangan, terutama di semak atau lahan kering.","Tidak membakar sampah atau lahan. Pilih kompos atau bank sampah.","Cek peringatan karhutla dan titik panas di BMKG sebelum bepergian ke daerah rawan.","Siapkan masker N95/KN95 di rumah jika tinggal di daerah rawan asap.","Laporkan api atau asap yang mencurigakan ke BPBD setempat atau nomor darurat 112.","Pilih produk berlabel sertifikasi keberlanjutan, terutama kertas dan minyak sawit.","Ajak keluarga berbicara tentang bahaya membakar lahan.","Bagikan #JanganBakarMasaDepan ke minimal tiga temanmu."];
+let done=[];try{done=JSON.parse(localStorage.getItem("jbmd")||"[]")}catch(e){}
+$("#checks").innerHTML=acts.map((a,i)=>`<li><label><input type="checkbox" data-i="${i}" ${done.includes(i)?"checked":""}><span>${a}</span></label></li>`).join("");
+function upd(){const n=document.querySelectorAll("#checks input:checked").length;$("#barfill").style.width=(n/acts.length*100)+"%";$("#prog").textContent=n===acts.length?"Semua aksi selesai. Terima kasih sudah peduli.":`${n} dari ${acts.length} aksi selesai`}
+$("#checks").onchange=()=>{done=[...document.querySelectorAll("#checks input")].filter(x=>x.checked).map(x=>+x.dataset.i);try{localStorage.setItem("jbmd",JSON.stringify(done))}catch(e){}upd()};upd();
+/* Artikel */
+const arts=[
+{c:"Lingkungan",k:"gambut",t:"Kenapa gambut mudah terbakar dan sulit dipadamkan",s:"Gambut menyimpan karbon dalam jumlah besar. Saat mengering, ia berubah menjadi bahan bakar.",b:["Gambut adalah tumpukan sisa tumbuhan yang membusuk perlahan di tanah yang jenuh air. Selama basah, ia aman. Saat kanal-kanal dibuat dan airnya dikuras, gambut mengering dan berubah menjadi bahan bakar yang tebal.","Api di gambut menjalar di bawah permukaan, sehingga sulit dilihat dan sulit dipadamkan hanya dengan air dari atas. Ia bisa membara berhari-hari dan menghasilkan asap pekat.","Menjaga gambut tetap basah, termasuk lewat restorasi dan pembasahan kembali, adalah salah satu cara paling efektif mencegah kebakaran."]},
+{c:"Kesehatan",k:"kesehatan",t:"Asap karhutla: apa yang terjadi pada tubuh kita",s:"Partikel halus dalam asap bisa masuk jauh ke paru-paru. Kenali kelompok yang paling rentan.",b:["Asap karhutla mengandung partikel sangat halus (PM2.5) dan gas berbahaya. Partikel ini bisa terhirup jauh ke dalam paru-paru dan memicu batuk, mata perih, sesak napas, serta infeksi saluran pernapasan (ISPA).","Anak-anak, lansia, ibu hamil, dan penderita asma atau penyakit jantung paling berisiko.","Saat asap pekat: kurangi aktivitas di luar ruangan, gunakan masker N95/KN95 yang pas di wajah, tutup jendela, dan segera ke fasilitas kesehatan jika sesak napas."]},
+{c:"Data",k:"data",t:"Dari 2015 ke 2023: apa yang berubah, apa yang belum",s:"Angka karhutla naik turun mengikuti iklim, tetapi akar masalahnya masih sama.",b:["Pada 2015, lebih dari 2,6 juta hektare lahan terbakar dengan perkiraan kerugian Rp221 triliun (Bank Dunia). Pada 2023, tahun El Nino kuat, SiPongi+ mencatat 1,16 juta hektare.","Emisi karhutla menurun dari 624 juta ton CO2e pada 2019 menjadi 183 juta ton pada 2023 menurut KLHK, tetapi organisasi seperti Greenpeace Indonesia menilai luas area terbakar 2023 lebih besar dari angka resmi.","Pelajarannya: angka bisa berbeda tergantung metode, jadi bandingkan beberapa sumber. Dan selama lahan masih dibuka dengan api, risiko akan terus berulang setiap kemarau."]},
+{c:"Aksi",k:"pantau",t:"Cara memantau titik panas dan peringatan karhutla",s:"Kamu bisa ikut waspada tanpa alat khusus. Cukup buka sumber resmi.",b:["BMKG menyediakan halaman peringatan karhutla yang memuat informasi cuaca, titik panas, dan potensi karhutla. SiPongi+ menampilkan titik panas dan luas area terbakar.","Titik panas bukan selalu berarti ada api, tetapi menandakan area dengan suhu permukaan tinggi yang perlu dicek. Semakin banyak titik panas di musim kemarau, semakin tinggi kewaspadaan yang dibutuhkan.","Jika kamu melihat api atau asap yang mencurigakan, laporkan ke BPBD setempat atau hubungi 112."]}];
+$("#arts").innerHTML=arts.map((a,i)=>`<article class="art"><div class="thumb">${pic(a.k)}</div><div class="in"><span class="chip">${a.c}</span><h3>${a.t}</h3><p>${a.s}</p><button class="btn alt" data-i="${i}">Baca selengkapnya</button></div></article>`).join("");
+upgrade($("#arts"));
+$("#arts").onclick=e=>{const b=e.target.closest("button");if(!b)return;const a=arts[b.dataset.i];$("#dt").textContent=a.t;$("#db").innerHTML=a.b.map(p=>`<p>${p}</p>`).join("");$("#dlg").showModal()};
+$("#dclose").onclick=()=>$("#dlg").close();
+$("#dlg").addEventListener("click",e=>{if(e.target.id==="dlg")e.target.close()});
+</script>
+</body>
+</html>
