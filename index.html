@@ -35,6 +35,15 @@ nav a:hover{color:var(--ink);text-decoration:underline}
 .btn:hover{background:var(--green)}
 .btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
 .btn.alt:hover{background:var(--ink);color:#fff}
+.ticker{background:var(--amber);color:var(--ink);overflow:hidden;white-space:nowrap;border-block:2px solid var(--ink)}
+.track{display:inline-flex;animation:run 30s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.grp{display:flex;flex:none}
+.grp span{padding:12px 28px;font:700 1.05rem var(--head)}
+.grp span::after{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ink);margin-left:56px;vertical-align:middle}
+@keyframes run{to{transform:translateX(-50%)}}
+@keyframes wob{0%,100%{transform:rotate(0)}25%{transform:rotate(-3deg)}75%{transform:rotate(3deg)}}
+.btn:hover,.icon:hover,.art .btn:hover{animation:wob .4s}
 section{padding:68px 0;border-top:1px solid var(--line)}
 section h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:10px}
 .lead{max-width:58ch;color:var(--soft);margin:0 0 30px}
@@ -87,7 +96,7 @@ dialog p{margin:0 0 12px}
 footer{background:var(--ink);color:#fff;padding:44px 0;margin-top:20px}
 footer .tag{font:800 clamp(1.6rem,5vw,2.6rem) var(--head)}
 footer p{color:#C5CCC0;max-width:62ch;font-size:.95rem}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}.track{animation:none}.ticker{overflow-x:auto}.btn:hover,.icon:hover{animation:none}}
 @media(max-width:700px){.impact{grid-template-columns:1fr}.icon{flex:1 1 140px;width:auto}}
 </style>
 </head>
@@ -103,6 +112,8 @@ footer p{color:#C5CCC0;max-width:62ch;font-size:.95rem}
 <p>Kebakaran hutan dan lahan (karhutla) hampir selalu berulang tiap musim kemarau. Di sini kamu bisa memahami dampaknya, menguji pengetahuan, dan memilih satu langkah nyata untuk mencegahnya.</p>
 <a class="btn" href="#dampak">Lihat dampaknya</a> <a class="btn alt" href="#aksi">Lihat aksi kecil</a>
 </div></div>
+
+<div class="ticker" aria-hidden="true"><div class="track"><div class="grp"><span>Jangan bakar masa depan</span><span>Satu api kecil bisa jadi bencana besar</span><span>Cek titik panas sebelum bepergian</span><span>Lihat api atau asap? Hubungi 112</span><span>Udara bersih adalah hak semua orang</span></div><div class="grp"><span>Jangan bakar masa depan</span><span>Satu api kecil bisa jadi bencana besar</span><span>Cek titik panas sebelum bepergian</span><span>Lihat api atau asap? Hubungi 112</span><span>Udara bersih adalah hak semua orang</span></div></div></div>
 
 <section id="dampak"><div class="wrap">
 <h2>Siapa yang terkena dampaknya?</h2>
