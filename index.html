@@ -24,8 +24,8 @@ header.top .wrap{display:flex;gap:20px;align-items:center;justify-content:space-
 nav{display:flex;gap:16px;flex-wrap:wrap;font-size:.95rem}
 nav a{color:var(--soft);text-decoration:none}
 nav a:hover{color:var(--ink);text-decoration:underline}
-.hero{color:#fff;padding:120px 0 130px;background:linear-gradient(180deg,rgba(18,22,18,.5),rgba(18,22,18,.85)),url(hero.jpg) center/cover no-repeat,radial-gradient(ellipse at 75% 100%,#B5441F 0,#4A2A1C 38%,#1D2B24 78%)}
-.hero h1{font-size:clamp(2.3rem,7vw,4.6rem);font-weight:800;max-width:14ch;letter-spacing:-.02em}
+.hero{color:#fff;padding:120px 0 130px;background:linear-gradient(180deg,rgba(18,22,18,.5),rgba(18,22,18,.85)),url(hero.jpg) center/cover no-repeat,url(assets/hero.jpg) center/cover no-repeat,radial-gradient(ellipse at 75% 100%,#B5441F 0,#4A2A1C 38%,#1D2B24 78%)}
+.hero h1{font-size:clamp(2rem,6vw,3.8rem);font-weight:700;max-width:16ch;letter-spacing:-.02em}
 .hero p{max-width:52ch;color:#E9ECE4;font-size:1.15rem;margin:18px 0 26px}
 .hero .btn{background:var(--amber);color:var(--ink)}
 .hero .btn:hover{background:#fff}
@@ -100,7 +100,7 @@ footer p{color:#C5CCC0;max-width:62ch;font-size:.95rem}
 <main>
 <div class="hero"><div class="wrap">
 <h1>Api di lahan hari ini, asap di masa depan kita.</h1>
-<p>Setiap kebakaran meninggalkan dampak yang lebih panjang dari asapnya. Kenali ancaman karhutla bagi lingkungan dan kehidupan kita, lalu temukan langkah sederhana yang bisa kamu lakukan untuk mencegahnya.</p>
+<p>Kebakaran hutan dan lahan (karhutla) hampir selalu berulang tiap musim kemarau. Di sini kamu bisa memahami dampaknya, menguji pengetahuan, dan memilih satu langkah nyata untuk mencegahnya.</p>
 <a class="btn" href="#dampak">Lihat dampaknya</a> <a class="btn alt" href="#aksi">Lihat aksi kecil</a>
 </div></div>
 
@@ -164,8 +164,8 @@ kesehatan:`<svg ${V}><rect width="400" height="240" fill="#EBD9A0"/><rect width=
 data:`<svg ${V}><rect width="400" height="240" fill="#EAE7D8"/><path d="M30 208H370" stroke="#1D2B24" stroke-width="2"/><rect x="70" y="58" width="70" height="150" fill="#E4572E"/><rect x="165" y="113" width="70" height="95" fill="#F0A500"/><rect x="260" y="141" width="70" height="67" fill="#2E6A4C"/><g font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#1D2B24" text-anchor="middle"><text x="105" y="50">2,6 jt ha</text><text x="200" y="105">1,65 jt ha</text><text x="295" y="133">1,16 jt ha</text><text x="105" y="228">2015</text><text x="200" y="228">2019</text><text x="295" y="228">2023</text></g></svg>`,
 pantau:`<svg ${V}><rect width="400" height="240" fill="#1D2B24"/><path d="M0 60H400M0 120H400M0 180H400M80 0V240M160 0V240M240 0V240M320 0V240" stroke="#2E4A3C"/><path d="M40 150q30-60 90-50t60 50q-10 40-70 45t-80-45z" fill="#2E6A4C"/><path d="M230 90q40-40 100-20t40 70q-30 40-90 30t-50-80z" fill="#2E6A4C"/><g fill="none" stroke="#F0A500" opacity=".55"><circle cx="110" cy="140" r="18"/><circle cx="290" cy="105" r="20"/><circle cx="290" cy="105" r="34"/></g><g fill="#F0A500"><circle cx="110" cy="140" r="6"/><circle cx="135" cy="125" r="5"/><circle cx="290" cy="105" r="6"/><circle cx="312" cy="130" r="5"/><circle cx="268" cy="124" r="4"/></g><circle cx="135" cy="125" r="5" fill="#E4572E"/></svg>`};
 const pic=k=>`<div class="pic" data-k="${k}" role="img" aria-label="Ilustrasi ${k}">${S[k]}</div>`;
-/* Ganti ilustrasi dengan foto sendiri: simpan file assets/<nama>.jpg (manusia, satwa, lingkungan, gambut, kesehatan, data, pantau). Foto otomatis menggantikan ilustrasi. */
-function upgrade(root){root.querySelectorAll(".pic").forEach(p=>{const im=new Image();im.alt="";im.onload=()=>p.replaceChildren(im);im.src="assets/"+p.dataset.k+".jpg"})}
+/* Ganti ilustrasi dengan foto sendiri: simpan file <nama>.jpg di folder utama repo (atau di assets/) (manusia, satwa, lingkungan, gambut, kesehatan, data, pantau). Foto otomatis menggantikan ilustrasi. */
+function upgrade(root){root.querySelectorAll(".pic").forEach(p=>{const im=new Image();im.alt="";im.onload=()=>p.replaceChildren(im);im.onerror=()=>{im.onerror=null;im.src="assets/"+p.dataset.k+".jpg"};im.src=p.dataset.k+".jpg"})}
 /* Dampak */
 const impact={
 manusia:{i:"🫁",t:"Manusia",l:["Asap mengandung partikel halus (PM2.5) yang menyebabkan batuk, iritasi mata, dan gangguan pernapasan (ISPA).","Anak-anak, lansia, ibu hamil, dan penderita asma paling rentan.","Sekolah diliburkan, penerbangan terganggu, dan aktivitas ekonomi melambat.","Kebakaran 2015 diperkirakan merugikan Indonesia lebih dari Rp221 triliun (Bank Dunia)."]},
